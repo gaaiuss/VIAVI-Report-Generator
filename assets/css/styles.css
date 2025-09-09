@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    /* font-family: "Comic Sans MS"; */
     font-family: serif;
     font-size: 2rem;
     line-height: 1.5;
@@ -19,9 +20,12 @@ h1 {
 }
 
 :root {
-    --border-color: #eee;
     --gap: 3rem;
-    --primary-color: cornsilk;
+    --border-color: #eee;
+    --background : #000;
+    --primary-color: #fff;
+    --viavi-purple: #4c385f;
+    --viavi-light-purple: #73548f;
 }
 
 .section {
@@ -35,7 +39,7 @@ h1 {
 }
 
 .main-bg {
-    background-color: black;
+    background-color: var(--background);
     background-position: center center;
     background-size: cover;
     color: var(--primary-color);
@@ -66,7 +70,7 @@ h1 {
 }
 
 .button {
-    background-color: #4c385f;
+    background-color: var(--viavi-purple);
     border: none;
     color: var(--primary-color);
     padding: 1.5rem 3.2rem;
@@ -78,7 +82,7 @@ h1 {
 }
 
 .button:hover {
-  background-color: #73548f;
+  background-color: var(--viavi-light-purple);
   color: var(--primary-color);
 }
 
