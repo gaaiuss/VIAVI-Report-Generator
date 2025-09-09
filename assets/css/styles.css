@@ -35,7 +35,7 @@ h1 {
 .main-content {
     margin: 0 auto;
     max-width: 120rem;
-    padding: 12rem var(--gap);
+    padding: 20rem var(--gap);
 }
 
 .main-bg {
