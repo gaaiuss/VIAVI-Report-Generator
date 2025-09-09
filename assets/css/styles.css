@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: serif;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+:root {
+    --border-color: #eee;
+    --gap: 3rem;
+    --primary-color: cornsilk;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.main-content {
+    margin: 0 auto;
+    max-width: 120rem;
+    padding: 12rem var(--gap);
+}
+
+.main-bg {
+    background-color: black;
+    background-position: center center;
+    background-size: cover;
+    color: var(--primary-color);
+}
+
+.logo-content {
+    display: flex;
+    max-width: 120rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.logo-img {
+    width: 40rem;
+    height: 8rem;
+}
+
+.text-content {
+    display: flex;
+    max-width: 120rem;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.button-content {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: #4c385f;
+    border: none;
+    color: var(--primary-color);
+    padding: 1.5rem 3.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 2rem;
+    transition-duration: 200ms;
+}
+
+.button:hover {
+  background-color: #73548f;
+  color: var(--primary-color);
+}
+
+.span {
+    width: 2rem;
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 400px) {
+}
