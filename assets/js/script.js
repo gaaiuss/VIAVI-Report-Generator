@@ -1,14 +1,36 @@
-async function openDirectoryPicker() {
+async function uploadFiles() {
+  const input = document.getElementById("fileInput");
+  const files = input.files;
+
+  if (!files.length) {
+    alert("Please select at least one JSON file.");
+    return;
+  }
+
+  const formData = new FormData();
+  for (let file of files) {
+    formData.append("files", file); // "files" must match your backend field name
+  }
+
   try {
-    const directoryHandle = await window.showDirectoryPicker();
-    console.log('Directory selected:', directoryHandle.name);
-    // You can then use the directoryHandle to access files within the selected directory.
-  } catch (error) {
-    console.error('Error opening directory picker:', error);
+    const response = await fetch("http://127.0.0.1:8000/upload", { // your backend URL here
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      alert("Files uploaded successfully: " + JSON.stringify(result));
+    } else {
+      alert("Upload failed: " + response.statusText);
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Error uploading files.");
   }
 }
 
 document.addEventListener('click', e => {
-    const lmt = e.target;
-    if (lmt.classList.contains('select-bt')) openDirectoryPicker();
+  const lmt = e.target;
+  if (lmt.classList.contains('upl-btn')) uploadFiles();
 });
