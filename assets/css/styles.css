@@ -73,12 +73,13 @@ h1 {
     background-color: var(--viavi-purple);
     border: none;
     color: var(--primary-color);
-    padding: 1.5rem 3.2rem;
+    padding: 1.3rem 2rem;
     text-align: center;
     text-decoration: none;
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition-duration: 200ms;
+    cursor: pointer;
 }
 
 .button:hover {
